@@ -92,6 +92,18 @@ export const IBCAssetInfos: (IBCAsset & {
     isVerified: true,
   },
   {
+    counterpartyChainId: "axelar-dojo-1",
+    sourceChannelId: "channel-208",
+    destChannelId: "channel-3",
+    coinMinimalDenom: "dot-planck",
+    depositUrlOverride:
+      "https://satellite.money/?source=moonbeam&destination=osmosis&asset_denom=dot-planck",
+    withdrawUrlOverride:
+      "https://satellite.money/?source=osmosis&destination=moonbeam&asset_denom=dot-planck",
+    sourceChainNameOverride: "Moonbeam",
+    isVerified: true,
+  },
+  {
     counterpartyChainId: "evmos_9001-2",
     sourceChannelId: "channel-204",
     destChannelId: "channel-0",
@@ -750,15 +762,22 @@ export const IBCAssetInfos: (IBCAsset & {
     sourceChainNameOverride: "Moonbeam",
   },
   {
-    counterpartyChainId: "axelar-dojo-1",
-    sourceChannelId: "channel-208",
-    destChannelId: "channel-3",
-    coinMinimalDenom: "dot-planck",
-    depositUrlOverride:
-      "https://satellite.money/?source=moonbeam&destination=osmosis&asset_denom=dot-planck",
-    withdrawUrlOverride:
-      "https://satellite.money/?source=osmosis&destination=moonbeam&asset_denom=dot-planck",
-    sourceChainNameOverride: "Moonbeam",
+    counterpartyChainId: "juno-1",
+    sourceChannelId: "channel-169",
+    destChannelId: "channel-47",
+    coinMinimalDenom:
+      "cw20:juno1j0a9ymgngasfn3l5me8qpd53l5zlm9wurfdk7r65s5mg6tkxal3qpgf5se",
+    ics20ContractAddress:
+      "juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn",
+  },
+  {
+    counterpartyChainId: "juno-1",
+    sourceChannelId: "channel-169",
+    destChannelId: "channel-47",
+    coinMinimalDenom:
+      "cw20:juno1gz8cf86zr4vw9cjcyyv432vgdaecvr9n254d3uwwkx9rermekddsxzageh",
+    ics20ContractAddress:
+      "juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn",
   },
 ].filter((ibcAsset) => (IS_FRONTIER ? true : ibcAsset.isVerified));
 
