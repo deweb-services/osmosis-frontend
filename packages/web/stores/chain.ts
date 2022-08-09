@@ -35,8 +35,8 @@ export class ChainStore extends BaseChainStore<ChainInfoWithExplorer> {
 
   @computed
   get osmosis(): ChainInfoWithExplorer {
-    if (this.hasChain(this.osmosisChainId)) {
-      return this.getChain(this.osmosisChainId).raw;
+    if (this.hasChain("osmo-test-4")) {
+      return this.getChain("osmo-test-4").raw;
     }
 
     throw new Error("osmosis chain not set");
@@ -49,8 +49,8 @@ export class ChainStore extends BaseChainStore<ChainInfoWithExplorer> {
     //        in the case of observable chain info, the .raw property needs to be handled separately.
     //        Created a temporary getter as a temporary fix.
     //        This method should be deleted once @keplr-wallet/stores has be fixed.
-    if (this.hasChain(this.osmosisChainId)) {
-      return this.getChain(this.osmosisChainId);
+    if (this.hasChain("osmo-test-4")) {
+      return this.getChain("osmo-test-4");
     }
 
     throw new Error("osmosis chain not set");

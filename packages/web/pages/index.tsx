@@ -46,7 +46,7 @@ const Home: NextPage = observer(function () {
 
             // Only pools with at least 1000 osmo are dealt with.
             if (asset.amount.currency.coinMinimalDenom === "uosmo") {
-              if (asset.amount.toDec().gt(new Dec(1000))) {
+              if (asset.amount.toDec().gt(new Dec(10))) {
                 hasEnoughAssets = true;
                 break;
               }

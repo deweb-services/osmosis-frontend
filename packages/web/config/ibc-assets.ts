@@ -242,6 +242,23 @@ export const IBCAssetInfos: (IBCAsset & {
     isVerified: true,
   },
   {
+    counterpartyChainId: "deweb-testnet-1",
+    sourceChannelId: "channel-261",
+    destChannelId: "channel-0",
+    coinMinimalDenom: "udws",
+    isVerified: true,
+  },
+  {
+    counterpartyChainId: "deweb-testnet-1",
+    sourceChannelId: "channel-426",
+    destChannelId: "channel-36",
+    coinMinimalDenom:
+      "cw20:deweb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s03q9ga",
+    ics20ContractAddress:
+      "deweb1nc5tatafv6eyq7llkr2gv50ff9e22mnf70qgjlv737ktmt4eswrqry982m",
+    isVerified: true,
+  },
+  {
     counterpartyChainId: "bitsong-2b",
     sourceChannelId: "channel-73",
     destChannelId: "channel-0",

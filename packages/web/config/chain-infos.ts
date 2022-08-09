@@ -5,9 +5,9 @@ import { createKeplrChainInfos, SimplifiedChainInfo } from "./utils";
 const chainInfos = (
   [
     {
-      rpc: "https://rpc-osmosis.keplr.app/", // test: "http://rpc-test.osmosis.zone/"
-      rest: "https://lcd-osmosis.keplr.app/", // test: "http://lcd-test.osmosis.zone/"
-      chainId: "osmosis-1", // test: "osmo-test-4"
+      rpc: "https://testnet-rpc.osmosis.zone/", // test: "http://rpc-test.osmosis.zone/"
+      rest: "https://testnet-rest.osmosis.zone/", // test: "http://lcd-test.osmosis.zone/"
+      chainId: "osmo-test-4", // test: "osmo-test-4"
       chainName: "Osmosis",
       bip44: {
         coinType: 118,
@@ -575,6 +575,47 @@ const chainInfos = (
       explorerUrlToTx: "https://www.mintscan.io/bitcanna/txs/{txHash}",
     },
     {
+      rpc: "http://144.91.117.177:26657",
+      rest: "http://144.91.117.177:1317",
+      chainId: "deweb-testnet-1",
+      chainName: "Deweb",
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: Bech32Address.defaultBech32Config("deweb"),
+      currencies: [
+        {
+          coinDenom: "DWS",
+          coinMinimalDenom: "udws",
+          coinDecimals: 6,
+          coinGeckoId: "pool:udws",
+          coinImageUrl: "/tokens/dws.png",
+          isStakeCurrency: true,
+          isFeeCurrency: true,
+        },
+        {
+          type: "cw20",
+          contractAddress:
+            "deweb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s03q9ga",
+          coinDenom: "UWSC",
+          coinMinimalDenom:
+            "cw20:deweb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s03q9ga:UWSC",
+          coinDecimals: 6,
+          // coinGeckoId: "pool:marble",
+          coinImageUrl: "/tokens/sc.png",
+        },
+      ],
+      eatures: [
+        "stargate",
+        "ibc-transfer",
+        "ibc-go",
+        "no-legacy-stdTx",
+        "wasmd_0.24+",
+        "cosmwasm",
+      ],
+      explorerUrlToTx: "https://explore.deweb.services/deweb/tx/{txHash}",
+    },
+    {
       rpc: "https://rpc.explorebitsong.com",
       rest: "https://lcd.explorebitsong.com",
       chainId: "bitsong-2b",
@@ -597,85 +638,99 @@ const chainInfos = (
           coinDenom: "CLAY",
           coinMinimalDenom: "ft2D8E7041556CE93E1EFD66C07C45D551A6AAAE09",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft2D8E7041556CE93E1EFD66C07C45D551A6AAAE09.png",
+          coinImageUrl:
+            "/tokens/ft2D8E7041556CE93E1EFD66C07C45D551A6AAAE09.png",
         },
         {
           coinDenom: "FASANO",
           coinMinimalDenom: "ft25B30C386CDDEBD1413D5AE1180956AE9EB3B9F7",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft25B30C386CDDEBD1413D5AE1180956AE9EB3B9F7.png",
+          coinImageUrl:
+            "/tokens/ft25B30C386CDDEBD1413D5AE1180956AE9EB3B9F7.png",
         },
         {
           coinDenom: "D9X",
           coinMinimalDenom: "ft575B10B0CEE2C164D9ED6A96313496F164A9607C",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft575B10B0CEE2C164D9ED6A96313496F164A9607C.png",
+          coinImageUrl:
+            "/tokens/ft575B10B0CEE2C164D9ED6A96313496F164A9607C.png",
         },
         {
           coinDenom: "FONTI",
           coinMinimalDenom: "ft56664FC98A2CF5F4FBAC3566D1A11D891AD88305",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft56664FC98A2CF5F4FBAC3566D1A11D891AD88305.png",
+          coinImageUrl:
+            "/tokens/ft56664FC98A2CF5F4FBAC3566D1A11D891AD88305.png",
         },
         {
           coinDenom: "BJKS",
           coinMinimalDenom: "ft52EEB0EE509AC546ED92EAC8591F731F213DDD16",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft52EEB0EE509AC546ED92EAC8591F731F213DDD16.png",
+          coinImageUrl:
+            "/tokens/ft52EEB0EE509AC546ED92EAC8591F731F213DDD16.png",
         },
         {
           coinDenom: "RWNE",
           coinMinimalDenom: "ftE4903ECC861CA45F2C2BC7EAB8255D2E6E87A33A",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ftE4903ECC861CA45F2C2BC7EAB8255D2E6E87A33A.png",
+          coinImageUrl:
+            "/tokens/ftE4903ECC861CA45F2C2BC7EAB8255D2E6E87A33A.png",
         },
         {
           coinDenom: "ENMODA",
           coinMinimalDenom: "ft85AE1716C5E39EA6D64BBD7898C3899A7B500626",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft85AE1716C5E39EA6D64BBD7898C3899A7B500626.png",
+          coinImageUrl:
+            "/tokens/ft85AE1716C5E39EA6D64BBD7898C3899A7B500626.png",
         },
         {
           coinDenom: "404DR",
           coinMinimalDenom: "ft99091610CCC66F4277C66D14AF2BC4C5EE52E27A",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft99091610CCC66F4277C66D14AF2BC4C5EE52E27A.png",
+          coinImageUrl:
+            "/tokens/ft99091610CCC66F4277C66D14AF2BC4C5EE52E27A.png",
         },
         {
           coinDenom: "N43",
           coinMinimalDenom: "ft387C1C279D962ED80C09C1D592A92C4275FD7C5D",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft387C1C279D962ED80C09C1D592A92C4275FD7C5D.png",
+          coinImageUrl:
+            "/tokens/ft387C1C279D962ED80C09C1D592A92C4275FD7C5D.png",
         },
         {
           coinDenom: "LOBO",
           coinMinimalDenom: "ft24C9FA4F10B0F235F4A815B15FC774E046A2B2EB",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft24C9FA4F10B0F235F4A815B15FC774E046A2B2EB.png",
+          coinImageUrl:
+            "/tokens/ft24C9FA4F10B0F235F4A815B15FC774E046A2B2EB.png",
         },
         {
           coinDenom: "VIBRA",
           coinMinimalDenom: "ft7020C2A8E984EEBCBB383E91CD6FBB067BB2272B",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft7020C2A8E984EEBCBB383E91CD6FBB067BB2272B.png",
+          coinImageUrl:
+            "/tokens/ft7020C2A8E984EEBCBB383E91CD6FBB067BB2272B.png",
         },
         {
           coinDenom: "KARINA",
           coinMinimalDenom: "ft2DD67F5D99E9A141142B48474FA7B6B3FF00A3FE",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft2DD67F5D99E9A141142B48474FA7B6B3FF00A3FE.png",
+          coinImageUrl:
+            "/tokens/ft2DD67F5D99E9A141142B48474FA7B6B3FF00A3FE.png",
         },
         {
           coinDenom: "TESTA",
           coinMinimalDenom: "ft4B030260D99E3ABE2B604EA2B33BAF3C085CDA12",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ft4B030260D99E3ABE2B604EA2B33BAF3C085CDA12.png",
+          coinImageUrl:
+            "/tokens/ft4B030260D99E3ABE2B604EA2B33BAF3C085CDA12.png",
         },
         {
           coinDenom: "CMQZ",
           coinMinimalDenom: "ftD4B6290EDEE1EC7B97AB5A1DC6C177EFD08ADCC3",
           coinDecimals: 6,
-          coinImageUrl: "/tokens/ftD4B6290EDEE1EC7B97AB5A1DC6C177EFD08ADCC3.png",
+          coinImageUrl:
+            "/tokens/ftD4B6290EDEE1EC7B97AB5A1DC6C177EFD08ADCC3.png",
         },
       ],
       features: ["stargate", "ibc-transfer", "no-legacy-stdTx", "ibc-go"],
